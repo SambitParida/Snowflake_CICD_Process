@@ -6,7 +6,7 @@ on:
     branches:
       - master
     paths:
-      - 'scripts/**'
+      - 'dbscripts/**'
 
   workflow_dispatch:
 
