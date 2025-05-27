@@ -1,4 +1,4 @@
-ame: schema-change-demo
+name: schema-change-demo
 
 # Triggers the action based on branch and path. 
 on:
