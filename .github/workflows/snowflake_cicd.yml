@@ -4,7 +4,7 @@ name: schema-change-demo
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - 'dbscripts/**'
 
@@ -34,4 +34,4 @@ jobs:
           SF_PASSWORD: ${{ secrets.SF_PASSWORD }}
         run: |
           pip install schemachange
-          schemachange -f $GITHUB_WORKSPACE/scripts -a $SF_ACCOUNT -u $SF_USERNAME -r $SF_ROLE -w $SF_WAREHOUSE -d $SF_DATABASE -c $SNOWFLAKE_DATABASE.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table
+          schemachange -f $GITHUB_WORKSPACE/dbscripts -a $SF_ACCOUNT -u $SF_USERNAME -r $SF_ROLE -w $SF_WAREHOUSE -d $SF_DATABASE -c $SNOWFLAKE_DATABASE.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table
