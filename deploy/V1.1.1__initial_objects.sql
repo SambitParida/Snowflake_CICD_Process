@@ -4,3 +4,6 @@ USE SCHEMA PUBLIC;
 
 CREATE TABLE EMP_TEST1(ENAME VARCHAR(5));
 insert into emp_test1 values ('aaa');
+
+CREATE TABLE EMP_TEST2(ENAME VARCHAR(5));
+insert into emp_test2 values ('aaa');
